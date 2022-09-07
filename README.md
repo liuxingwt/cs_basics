@@ -1,6 +1,8 @@
-## 编程常见的一些问题
+## 编程常问题
+#### 1. call_across_language（不同语言之间的相互调用）
 
-#### trick1. 在CSDN中enable复制
+
+##### 1. 如何在CSDN中enable复制
 ```javascript
 // 按F12后进入console，然后输入以下命令
 javascript:document.body.contentEditable='true';document.designMode='on'; void 0
