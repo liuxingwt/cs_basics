@@ -4,7 +4,7 @@
 
 ### 1. 安装说明
 #### 1.1 安装Nsight Systems Server
-（1）在x86_64的GPU机器上：
+（1）在x86_64的GPU机器上，安装nsight-systems-2021.5.2
 ```shell
-bash install_nsight_server.sh
+bash install.sh
 ```
