@@ -31,7 +31,7 @@ Answer = openai.ChatCompletion.create(
 # print the completion
 print(Answer)
 
-f = open('test-chatgpt-52cv.py','w',encoding='utf-8')
+f = open('test-chatgpt.py','w',encoding='utf-8')
 print(Answer["choices"][0]["message"]["content"].strip(" \n"),file=f)
 
 f.close()
