@@ -4,8 +4,8 @@
 import openai
 
 openai.api_key = "sk-换成你的api key"
-
 Prompt_example = """
+
 请写一段Python程序,实现从文件夹test读取所有png格式图像,
 检测图片是否含有猫和狗,如有,请把该图片保存到文件夹train中。
 注意：
@@ -16,24 +16,16 @@ Prompt_example = """
 """
 
 Answer = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo",
-    temperature=0,
-    max_tokens=3000,
-    top_p=1,
-    frequency_penalty=0,
-    presence_penalty=0,
+    model="gpt-3.5-turbo", temperature=0, max_tokens=3000,
+    top_p=1, frequency_penalty=0, presence_penalty=0,
     messages=[
         {"role": "system", "content": "You are a useful assistant."},
         {"role": "user", "content": Prompt_example}
     ]
 )
 
-# print the completion
 print(Answer)
-
 f = open('test-chatgpt.py','w',encoding='utf-8')
 print(Answer["choices"][0]["message"]["content"].strip(" \n"),file=f)
-
 f.close()
-
 ```
